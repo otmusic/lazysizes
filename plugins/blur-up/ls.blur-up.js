@@ -172,7 +172,8 @@
 
 			lazySizes.fire(img, 'blurUpLoaded', {
 				width: img.width,
-				height: img.height
+				height: img.height,
+				img: img,
 			});
 
 			if(blurUp != 'always' && (!isBlurUpLoaded || Date.now() - start < 66)){
