@@ -170,7 +170,10 @@
 				});
 			}
 
-			lazySizes.fire(img, 'blurUpLoaded');
+			lazySizes.fire(img, 'blurUpLoaded', {
+				width: img.width,
+				height: img.height
+			});
 
 			if(blurUp != 'always' && (!isBlurUpLoaded || Date.now() - start < 66)){
 				setStateUp(true);
